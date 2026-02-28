@@ -16,7 +16,7 @@ const Player = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [isSeeking, setIsSeeking] = useState(false);
 
-    const animationFrameRef = useRef<number>();
+    const animationFrameRef = useRef<number>(undefined);
     const targetTimeRef = useRef<number | null>(null);
 
     const [play, { sound, pause }] = useSound(song, {
@@ -29,7 +29,7 @@ const Player = () => {
                 setDuration(songDuration);
             }
         },
-        onloaderror: (id, error) => {
+        onloaderror: (error: string) => {
             console.error("Error loading sound:", error);
             setIsLoading(false);
         },
@@ -47,16 +47,6 @@ const Player = () => {
             setCurrentTime(0);
         },
     });
-
-    // Try to get duration when sound becomes available
-    useEffect(() => {
-        if (sound && duration === 0) {
-            const songDuration = sound.duration();
-            if (songDuration) {
-                setDuration(songDuration);
-            }
-        }
-    }, [sound, duration]);
 
     // Update progress while playing with smooth animation
     useEffect(() => {

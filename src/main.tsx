@@ -6,7 +6,6 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Layout from "./components/Layout.tsx";
 import Projects from "./Projects.tsx";
 import Playlist from "./Playlist.tsx";
-import { HeroUIProvider } from "@heroui/system";
 
 createRoot(document.getElementById("root")!).render(
     <StrictMode>
