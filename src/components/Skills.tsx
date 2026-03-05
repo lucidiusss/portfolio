@@ -62,8 +62,9 @@ const Skills = () => {
                 id="skills"
                 className="flex flex-wrap items-center justify-center gap-5"
             >
-                {SKILLS.map((skill: SkillProps) => (
+                {SKILLS.map((skill: SkillProps, i: number) => (
                     <SkillIcon
+                        key={i}
                         skill={skill.name}
                         className={cn(
                             "text-[#A1A1A1] transition text-xl w-64 rounded-lg p-4 border border-[#A1A1A1]",
