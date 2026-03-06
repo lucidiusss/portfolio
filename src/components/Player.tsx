@@ -1,37 +1,11 @@
-import { useEffect } from "react";
-import { useAudio, type AudioSource } from "@splicemood/react-music-player";
+import Controls from "./Controls";
+import ProgressBar from "./ProgressBar";
 
 const Player = () => {
-    const audio = useAudio<AudioSource>();
-
-    useEffect(() => {
-        audio.addToPlaylist({ src: "/songs/Rich Amiri - Mournin.mp3" });
-        // Cleanup on unmount
-        return () => {
-            audio.replacePlaylist([]);
-        };
-    }, []);
-
-    const handleClick = () => {
-        audio.setVolumePercent(100);
-        audio.togglePlayPause();
-        console.log(audio.isPlaying);
-    };
-
     return (
-        <div>
-            <button className="text-white" onClick={handleClick}>
-                play
-            </button>
-            <input
-                type="range"
-                max={audio.maxTime}
-                value={audio.currentTime}
-                onChange={(ev) => {
-                    const newTime = ev.currentTarget.value;
-                    audio.setUpdateTime(Number(newTime));
-                }}
-            />
+        <div className=" fixed bottom-5 flex flex-col h-16 bg-black/20 backdrop-blur-sm w-full gap-5 items-center justify-center">
+            <Controls />
+            <ProgressBar />
         </div>
     );
 };

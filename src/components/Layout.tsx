@@ -1,12 +1,22 @@
+import { PlayerFullSyncProvider } from "@splicemood/react-music-player";
 import Header from "./Header";
-import { Outlet } from "react-router";
+import { Outlet, useLocation } from "react-router";
+import MiniPlayer from "./MiniPlayer";
 
 const Layout = () => {
+    const path = useLocation();
+
     return (
         <div>
             <Header />
-            <Outlet />
-            {/*<Player />*/}
+            <PlayerFullSyncProvider>
+                <Outlet />
+                {path.pathname != "/playlist" ? (
+                    <MiniPlayer classNames={`bg-none`} />
+                ) : (
+                    <></>
+                )}
+            </PlayerFullSyncProvider>
         </div>
     );
 };

@@ -1,13 +1,53 @@
 import type { SongType } from "@/types/globalTypes";
+import { Avatar, Description, Label, ListBox, Skeleton } from "@heroui/react";
+import { useAudio } from "@splicemood/react-music-player";
+import { useState, type FC } from "react";
 
-const Song = ({ song }: { song: SongType }) => {
+interface SongProps {
+    key?: number;
+    song: SongType;
+}
+
+const Song: FC<SongProps> = ({ song }) => {
+    const audio = useAudio<SongType>();
+    const [imageLoaded, setImageLoaded] = useState<boolean>(false);
+
+    const handleTrackClick = () => {
+        audio.setCurrentTrack(song.id - 1);
+        console.log(audio.currentTrackIndex);
+        audio.play();
+    };
+
     return (
-        <div className="hover:bg-[#A1A1A1] group px-4 py-2 select-none">
-            <h1 className="text-white">{song.title}</h1>
-            <p className="group-hover:text-white text-[#A1A1A1]">
-                {song.artist}
-            </p>
-        </div>
+        <ListBox.Item
+            key={song.id}
+            id={song.id}
+            onClick={handleTrackClick}
+            textValue={song.title}
+            className="hover:bg-neutral-900! rounded-lg transition hover:border-neutral-700 border-2 border-transparent w-1/2  px-4 py-2 bg-transparent!"
+        >
+            <div className="relative">
+                {!imageLoaded && (
+                    <Skeleton className="absolute inset-0 rounded-lg" />
+                )}
+
+                <Avatar className="rounded-lg" size="md">
+                    <Avatar.Image
+                        onLoad={() => setImageLoaded(true)}
+                        alt={song.title}
+                        src={song.cover}
+                        className={!imageLoaded ? "opacity-0" : "opacity-100"}
+                    />
+                </Avatar>
+            </div>
+            <div className="flex gap-1 flex-col">
+                <Label className="text-white text-xl">{song.title}</Label>
+                <Description className="text-[#a1a1a1] text-[16px]">
+                    {song.artist}
+                </Description>
+            </div>
+            <ListBox.ItemIndicator />
+        </ListBox.Item>
     );
 };
 

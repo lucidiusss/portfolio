@@ -1,114 +1,120 @@
-import { Avatar, Description, Label, ListBox } from "@heroui/react";
+import { ListBox } from "@heroui/react";
 
 import Player from "./components/Player";
 import type { SongType } from "./types/globalTypes";
-
+import Song from "./components/Song";
+import { useEffect } from "react";
+import { useAudio } from "@splicemood/react-music-player";
 const SONGS = [
     {
         id: 1,
         title: "Mournin",
         artist: "Rich Amiri",
-        cover: "",
-        src: "/songs/Rich Amiri - Mournin",
+        artistLink: "https://soundcloud.com/richamiri",
+        cover: "/covers/mournin.jpg",
+        src: "/songs/Rich Amiri - Mournin.mp3",
     },
     {
         id: 2,
         title: "sinister",
-        artist: "klmketa",
-        cover: "",
-        src: "/songs/reloaded.mp3",
+        artist: "deathkeylon",
+        artistLink: "https://soundcloud.com/deathkeylon",
+        cover: "/covers/sinister.jpg",
+        src: "/songs/sinister.mp3",
     },
     {
         id: 3,
         title: "Osamawalk",
         artist: "klmketa",
-        cover: "",
+        artistLink: "https://soundcloud.com/user-18726447",
+        cover: "/covers/osamawalk.jpg",
         src: "/songs/osamawalk.mp3",
     },
     {
         id: 4,
         title: "omg its uuu+",
         artist: "deathkeylon",
-        cover: "",
+        artistLink: "https://soundcloud.com/deathkeylon",
+        cover: "/covers/omgitsuuu+.jpg",
         src: "/songs/omg its uuu+.mp3",
     },
     {
         id: 5,
         title: "lyfeRULEs",
         artist: "gerrarti",
-        cover: "",
+        artistLink: "https://soundcloud.com/ya_raspalsya/popular-tracks",
+        cover: "/covers/lyferules.jpg",
         src: "/songs/lyfeRULEs.mp3",
     },
     {
         id: 6,
         title: "HUNCHOS",
         artist: "Rich Amiri",
-        cover: "",
+        artistLink: "https://soundcloud.com/richamiri",
+        cover: "/covers/hunchos.jpg",
         src: "/songs/HUNCHOS.mp3",
     },
     {
         id: 7,
         title: "200",
         artist: "sosocamo",
+        artistLink: "https://soundcloud.com/sosocamo",
         cover: "",
         src: "/songs/200 - sosocamo.flac",
     },
     {
         id: 8,
         title: "Flex or die tryin",
-        artist: "klmketaR",
+        artist: "klmketa",
+        artistLink: "https://soundcloud.com/user-18726447",
         cover: "",
         src: "/songs/Flex or die tryin.mp3",
     },
     {
         id: 9,
-        title: "COMЁ N GO",
+        title: "COMË N GO",
         artist: "Yeat",
+        artistLink: "https://soundcloud.com/lilyeat",
         cover: "",
-        src: "/songs/COMË N GO - Yeat.mp3",
+        src: "/songs/COMË N GO - Yeat.flac",
     },
     {
         id: 10,
         title: "Sleepwalker",
         artist: "akiaura",
-        cover: "",
+        artistLink: "https://soundcloud.com/akiaura",
+        cover: "/covers/sleepwalker.jpg",
         src: "/songs/sleepwalker.mp3",
+    },
+    {
+        id: 11,
+        title: "Reloaded",
+        artist: "klmketa",
+        artistLink: "https://soundcloud.com/user-18726447",
+        cover: "/covers/reloaded.jpg",
+        src: "/songs/reloaded.mp3",
     },
 ];
 
 const Playlist = () => {
+    const audio = useAudio<SongType>();
+    useEffect(() => {
+        audio.replacePlaylist(SONGS);
+        audio.setCurrentTrack(audio.currentTrackIndex);
+    }, []);
     return (
-        <div className="flex h-screen items-center flex-col justify-center">
+        <main className="flex relative h-screen items-center justify-center flex-col">
             <ListBox
                 aria-label="Songs"
-                className="w-1/2  rounded-xl"
+                className="w-1/2 flex gap-1 items-center"
                 selectionMode="single"
             >
-                {SONGS.map((song) => (
-                    <ListBox.Item
-                        key={song.id}
-                        id={song.id}
-                        textValue={song.title}
-                    >
-                        <Avatar className="rounded-xl" size="md">
-                            <Avatar.Image alt={song.artist} src={song.cover} />
-                            <Avatar.Fallback>{song.artist}</Avatar.Fallback>
-                        </Avatar>
-                        <div className="flex flex-col">
-                            <Label className="text-white text-2xl">
-                                {song.title}
-                            </Label>
-                            <Description className="text-[#a1a1a1] text-xl">
-                                {song.artist}
-                            </Description>
-                        </div>
-                        <ListBox.ItemIndicator />
-                    </ListBox.Item>
+                {audio.playlist.map((song: SongType) => (
+                    <Song song={song} key={song.id} />
                 ))}
             </ListBox>
-
             <Player />
-        </div>
+        </main>
     );
 };
 

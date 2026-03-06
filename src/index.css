@@ -16,7 +16,6 @@ html {
 body {
     background-color: #030303;
     width: full;
-    height: 200vh;
 
     font-family:
         "Geist",
@@ -171,5 +170,19 @@ html.lenis body {
     }
     body {
         @apply bg-background text-foreground;
+    }
+}
+
+@layer components {
+    .list-box-item {
+        &:active,
+        &[data-pressed="true"] {
+            transform: none;
+        }
+        &[aria-selected="true"],
+        &[data-selected="true"] {
+            background-color: #171717;
+            border-color: #404040;
+        }
     }
 }
