@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import Layout from "./components/Layout.tsx";
 import Projects from "./Projects.tsx";
 import Playlist from "./Playlist.tsx";
+import { PlayerNoSyncProvider } from "@splicemood/react-music-player";
 
 createRoot(document.getElementById("root")!).render(
     <BrowserRouter>
@@ -12,7 +13,14 @@ createRoot(document.getElementById("root")!).render(
             <Route element={<Layout />}>
                 <Route path="/" element={<App />} />
                 <Route path="/works" element={<Projects />} />
-                <Route path="/playlist" element={<Playlist />} />
+                <Route
+                    path="/playlist"
+                    element={
+                        <PlayerNoSyncProvider>
+                            <Playlist />
+                        </PlayerNoSyncProvider>
+                    }
+                />
             </Route>
         </Routes>
     </BrowserRouter>,

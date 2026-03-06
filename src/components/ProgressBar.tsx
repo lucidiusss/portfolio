@@ -22,11 +22,8 @@ const ProgressBar = () => {
                 step={0.1}
                 onValueChange={(value) => audio.setUpdateTime(value[0])}
                 className="w-full group"
-                // Style the track
                 trackClassName="h-4 bg-neutral-800 rounded-full transition-all duration-200"
-                // Style the range (progress)
                 rangeClassName="bg-[#a1a1a1] group-hover:bg-white rounded-full"
-                // Style the thumb (handle)
                 thumbClassName="block w-3 h-3 bg-white rounded-full shadow-lg opacity-0 group-hover:opacity-100 hover:scale-125 transition-all duration-200 focus:outline-none"
             />
             <span className="text-white select-none">

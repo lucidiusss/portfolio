@@ -3,7 +3,7 @@ import { ListBox } from "@heroui/react";
 import Player from "./components/Player";
 import type { SongType } from "./types/globalTypes";
 import Song from "./components/Song";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useAudio } from "@splicemood/react-music-player";
 const SONGS = [
     {
@@ -59,7 +59,7 @@ const SONGS = [
         title: "200",
         artist: "sosocamo",
         artistLink: "https://soundcloud.com/sosocamo",
-        cover: "",
+        cover: "/covers/200.jpg",
         src: "/songs/200 - sosocamo.flac",
     },
     {
@@ -67,7 +67,7 @@ const SONGS = [
         title: "Flex or die tryin",
         artist: "klmketa",
         artistLink: "https://soundcloud.com/user-18726447",
-        cover: "",
+        cover: "/covers/flexordietryin.jpg",
         src: "/songs/Flex or die tryin.mp3",
     },
     {
@@ -75,7 +75,7 @@ const SONGS = [
         title: "COMË N GO",
         artist: "Yeat",
         artistLink: "https://soundcloud.com/lilyeat",
-        cover: "",
+        cover: "/covers/comengo.jpg",
         src: "/songs/COMË N GO - Yeat.flac",
     },
     {
@@ -100,8 +100,13 @@ const Playlist = () => {
     const audio = useAudio<SongType>();
     useEffect(() => {
         audio.replacePlaylist(SONGS);
-        audio.setCurrentTrack(audio.currentTrackIndex);
+        audio.setVolumePercent(50);
+
+        return () => {
+            audio.replacePlaylist([]);
+        };
     }, []);
+
     return (
         <main className="flex relative h-screen items-center justify-center flex-col">
             <ListBox
@@ -109,9 +114,9 @@ const Playlist = () => {
                 className="w-1/2 flex gap-1 items-center"
                 selectionMode="single"
             >
-                {audio.playlist.map((song: SongType) => (
-                    <Song song={song} key={song.id} />
-                ))}
+                {audio.playlist.map((song: SongType) => {
+                    return <Song song={song} key={song.id} />;
+                })}
             </ListBox>
             <Player />
         </main>

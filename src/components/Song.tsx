@@ -14,7 +14,6 @@ const Song: FC<SongProps> = ({ song }) => {
 
     const handleTrackClick = () => {
         audio.setCurrentTrack(song.id - 1);
-        console.log(audio.currentTrackIndex);
         audio.play();
     };
 
