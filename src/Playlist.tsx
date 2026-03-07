@@ -12,7 +12,7 @@ const SONGS = [
         artist: "Rich Amiri",
         artistLink: "https://soundcloud.com/richamiri",
         cover: "/covers/mournin.jpg",
-        src: "/songs/Rich Amiri - Mournin.mp3",
+        src: "/songs/mournin.mp3",
     },
     {
         id: 2,
@@ -36,7 +36,7 @@ const SONGS = [
         artist: "deathkeylon",
         artistLink: "https://soundcloud.com/deathkeylon",
         cover: "/covers/omgitsuuu+.jpg",
-        src: "/songs/omg its uuu+.mp3",
+        src: "/songs/omgitsu.mp3",
     },
     {
         id: 5,
@@ -60,7 +60,7 @@ const SONGS = [
         artist: "sosocamo",
         artistLink: "https://soundcloud.com/sosocamo",
         cover: "/covers/200.jpg",
-        src: "/songs/200 - sosocamo.flac",
+        src: "/songs/200sosocamo.flac",
     },
     {
         id: 8,
@@ -68,7 +68,7 @@ const SONGS = [
         artist: "klmketa",
         artistLink: "https://soundcloud.com/user-18726447",
         cover: "/covers/flexordietryin.jpg",
-        src: "/songs/Flex or die tryin.mp3",
+        src: "/songs/flexordietryin.mp3",
     },
     {
         id: 9,
@@ -76,7 +76,7 @@ const SONGS = [
         artist: "Yeat",
         artistLink: "https://soundcloud.com/lilyeat",
         cover: "/covers/comengo.jpg",
-        src: "/songs/COMË N GO - Yeat.flac",
+        src: "/songs/comengoyeat.flac",
     },
     {
         id: 10,
