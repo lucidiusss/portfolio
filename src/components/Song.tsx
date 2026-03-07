@@ -27,7 +27,7 @@ const Song: FC<SongProps> = ({ song }) => {
             textValue={song.title}
             className={`
                 rounded-lg transition border-2
-                w-1/4 px-4 py-2
+                px-4 py-2 w-2/4
                 hover:border-neutral-700 hover:bg-neutral-900!
                 ${
                     isCurrentTrack
