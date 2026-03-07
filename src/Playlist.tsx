@@ -3,7 +3,7 @@ import { ListBox } from "@heroui/react";
 import Player from "./components/Player";
 import type { SongType } from "./types/globalTypes";
 import Song from "./components/Song";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useAudio } from "@splicemood/react-music-player";
 const SONGS = [
     {
@@ -111,7 +111,7 @@ const Playlist = () => {
         <main className="flex relative h-screen items-center justify-center flex-col">
             <ListBox
                 aria-label="Songs"
-                className="w-1/2 flex gap-1 items-center"
+                className="flex flex-3/4 gap-1 items-center"
                 selectionMode="single"
             >
                 {audio.playlist.map((song: SongType) => {
