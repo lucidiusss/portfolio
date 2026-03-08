@@ -29,9 +29,6 @@ const Header = () => {
             <NavLink to="/playlist" className={classNames}>
                 playlist
             </NavLink>
-            <NavLink to="/links" className={classNames}>
-                links
-            </NavLink>
         </nav>
     );
 };

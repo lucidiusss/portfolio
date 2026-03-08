@@ -98,6 +98,7 @@ const SONGS = [
 
 const Playlist = () => {
     const audio = useAudio<SongType>();
+
     useEffect(() => {
         audio.replacePlaylist(SONGS);
         audio.setVolumePercent(50);

@@ -127,7 +127,7 @@ const Player = () => {
                     showThumb={true}
                 />
 
-                <span className="text-[#a1a1a1] select-none text-md min-w-[40px]">
+                <span className="text-[#a1a1a1] select-none text-md min-w-10">
                     {displayVolume}%
                 </span>
             </div>
