@@ -7,6 +7,7 @@ import { useState, useMemo, useCallback, memo } from "react";
 import { Volume1, Volume2, VolumeX } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { Skeleton } from "@heroui/react";
 
 const SLIDER_CLASSES = {
     trackClassName:
@@ -17,6 +18,8 @@ const SLIDER_CLASSES = {
 } as const;
 
 const SongInfo = memo(({ song }: { song?: SongType }) => {
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+
     if (!song) {
         return (
             <div className="flex items-center flex-1/4 ml-10 gap-3">
@@ -29,12 +32,13 @@ const SongInfo = memo(({ song }: { song?: SongType }) => {
         <div className="flex items-center flex-1/4 ml-10 gap-3">
             <div className="w-16 h-16">
                 <Image
-                    loading="eager"
+                    loading="lazy"
                     width={64}
                     height={64}
-                    className="w-16 h-16 rounded-lg object-cover"
+                    className="rounded-lg object-cover"
                     src={song.cover}
                     alt={song.title}
+                    onLoad={() => setIsLoading(false)}
                 />
             </div>
             <div>

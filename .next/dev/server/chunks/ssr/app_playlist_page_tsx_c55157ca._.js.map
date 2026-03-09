@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/lucid/Projects/portfolio/app/playlist/page.tsx"],"sourcesContent":["\"use client\";\n\nconst Page = () => {\n    return (\n        <main className=\"flex relative h-screen items-center justify-center flex-col\"></main>\n    );\n};\n\nexport default Page;\n"],"names":[],"mappings":";;;;;AAAA;;AAEA,MAAM,OAAO;IACT,qBACI,8OAAC;QAAK,WAAU;;;;;;AAExB;uCAEe"}}]
-}

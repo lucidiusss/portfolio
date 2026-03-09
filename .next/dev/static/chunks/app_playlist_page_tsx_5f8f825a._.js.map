@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/lucid/Projects/portfolio/app/playlist/page.tsx"],"sourcesContent":["\"use client\";\n\nimport { PlayerFullSyncProvider } from \"@splicemood/react-music-player\";\nimport dynamic from \"next/dynamic\";\n\nconst PlaylistContent = dynamic(\n    () => import(\"@/components/PlaylistContent\"), // Loader function\n    {\n        ssr: false,\n    },\n);\n\nexport default function PlaylistPage() {\n    return (\n        <main className=\"h-screen w-full flex items-center justify-center\">\n            <PlayerFullSyncProvider>\n                <PlaylistContent />\n            </PlayerFullSyncProvider>\n        </main>\n    );\n}\n"],"names":[],"mappings":";;;;;AAEA;AACA;;AAHA;;;;AAKA,MAAM,kBAAkB,IAAA,6KAAO,EAC3B;;;;;;IAEI,KAAK;;KAHP;AAOS,SAAS;IACpB,qBACI,6LAAC;QAAK,WAAU;kBACZ,cAAA,6LAAC,8MAAsB;sBACnB,cAAA,6LAAC;;;;;;;;;;;;;;;AAIjB;MARwB"}}]
-}
