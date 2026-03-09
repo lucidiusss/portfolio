@@ -2,7 +2,7 @@
   "[project]/components/PlaylistContent.tsx [app-client] (ecmascript, next/dynamic entry)": {
     "id": "[project]/components/PlaylistContent.tsx [app-client] (ecmascript, next/dynamic entry)",
     "files": [
-      "static/chunks/node_modules_music-metadata_lib_834a1be5._.js",
+      "static/chunks/node_modules_music-metadata_lib_7bab957a._.js",
       "static/chunks/node_modules_e1753fd5._.js",
       "static/chunks/node_modules_react-aria-components_dist_b386938a._.js",
       "static/chunks/node_modules_@react-aria_interactions_dist_5ee8d041._.js",
@@ -11,7 +11,7 @@
       "static/chunks/node_modules_next_a62874fb._.js",
       "static/chunks/node_modules_fdfb203f._.js",
       "static/chunks/_094c3e7d._.js",
-      "static/chunks/components_PlaylistContent_tsx_234d56b5._.js"
+      "static/chunks/components_PlaylistContent_tsx_4d4e8cea._.js"
     ]
   }
 }
