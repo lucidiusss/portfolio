@@ -11,7 +11,7 @@ RUN bun run build
 FROM nginx:alpine
 
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY --from=builder /app/.next /usr/share/nginx/html
+COPY --from=builder /app/out /usr/share/nginx/html
 COPY public/songs/ /usr/share/nginx/html/songs/
 COPY public/covers/ /usr/share/nginx/html/covers/
 
