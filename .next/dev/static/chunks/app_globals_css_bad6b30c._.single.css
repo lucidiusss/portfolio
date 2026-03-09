@@ -12607,6 +12607,10 @@
     background-color: var(--accent);
   }
 
+  .focus\:bg-white:focus {
+    background-color: var(--color-white);
+  }
+
   .focus\:text-accent-foreground:focus {
     color: var(--accent-foreground);
   }
@@ -12668,6 +12672,10 @@
       outline-offset: 2px;
       outline: 2px solid #0000;
     }
+  }
+
+  .active\:bg-white:active {
+    background-color: var(--color-white);
   }
 
   .disabled\:pointer-events-none:disabled {
