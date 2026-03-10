@@ -1,6 +1,5 @@
 "use client";
 
-import { PlayerFullSyncProvider } from "@splicemood/react-music-player";
 import dynamic from "next/dynamic";
 
 const PlaylistContent = dynamic(
@@ -12,7 +11,7 @@ const PlaylistContent = dynamic(
 
 export default function PlaylistPage() {
     return (
-        <main className="h-screen w-full flex items-center justify-center">
+        <main className="h-full md:h-screen w-full flex items-center justify-center">
             <PlaylistContent />
         </main>
     );

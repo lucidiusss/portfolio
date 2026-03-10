@@ -30,18 +30,31 @@ const Menu = memo(
                     >
                         <nav className="flex flex-col gap-6">
                             <Link
+                                onClick={onClose}
                                 className={(cn("focus:bg-white"), classNames)}
                                 href="/"
                             >
                                 home
                             </Link>
-                            <Link href="/works" className={classNames}>
+                            <Link
+                                onClick={onClose}
+                                href="/works"
+                                className={classNames}
+                            >
                                 works
                             </Link>
-                            <Link href="/blog" className={classNames}>
+                            <Link
+                                onClick={onClose}
+                                href="/blog"
+                                className={classNames}
+                            >
                                 blog
                             </Link>
-                            <Link href="/playlist" className={classNames}>
+                            <Link
+                                onClick={onClose}
+                                href="/playlist"
+                                className={classNames}
+                            >
                                 playlist
                             </Link>
                         </nav>
@@ -61,7 +74,7 @@ const Header = () => {
 
     return (
         <>
-            <div className="fixed top-5 right-5 z-50">
+            <div className="fixed lg:hidden top-5 right-5 z-50">
                 <Hamburger
                     toggled={isOpen}
                     toggle={setOpen}

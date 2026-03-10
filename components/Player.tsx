@@ -7,7 +7,6 @@ import { useState, useMemo, useCallback, memo } from "react";
 import { Volume1, Volume2, VolumeX } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { Skeleton } from "@heroui/react";
 
 const SLIDER_CLASSES = {
     trackClassName:
@@ -18,34 +17,31 @@ const SLIDER_CLASSES = {
 } as const;
 
 const SongInfo = memo(({ song }: { song?: SongType }) => {
-    const [isLoading, setIsLoading] = useState<boolean>(false);
-
     if (!song) {
         return (
-            <div className="flex items-center flex-1/4 ml-10 gap-3">
+            <div className="flex items-center md:flex-1/4 ml-10 gap-3">
                 <div className="text-white">No track selected</div>
             </div>
         );
     }
 
     return (
-        <div className="flex items-center flex-1/4 ml-10 gap-3">
-            <div className="w-16 h-16">
+        <div className="flex items-center md:flex-1/4 md:ml-10 gap-2 md:gap-3">
+            <div className="h-8 w-8 md:w-16 md:h-16">
                 <Image
                     loading="lazy"
-                    width={64}
-                    height={64}
-                    className="rounded-lg object-cover"
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 md:w-16 md:h-16 rounded-lg object-cover"
                     src={song.cover}
                     alt={song.title}
-                    onLoad={() => setIsLoading(false)}
                 />
             </div>
-            <div>
-                <h1 className="text-white">{song.title}</h1>
+            <div className="flex flex-col gap-0">
+                <h1 className="text-white text-sm  md:text-xl">{song.title}</h1>
                 <Link
                     href={song.artistLink || "#"}
-                    className="text-[#a1a1a1] hover:underline transition"
+                    className="text-[#a1a1a1] text-xs md:text-[16px] hover:underline transition"
                 >
                     {song.artist}
                 </Link>
@@ -77,13 +73,13 @@ const VolumeControl = memo(
         }, [displayVolume]);
 
         return (
-            <div className="w-48 flex items-center gap-2">
+            <div className="md:w-48 w-12 flex items-center gap-2">
                 <button
                     onClick={onToggleMute}
                     className="focus:outline-none cursor-pointer text-[#a1a1a1] hover:text-white transition-colors"
                     aria-label={displayVolume === 0 ? "Unmute" : "Mute"}
                 >
-                    <VolumeIcon className="w-6 h-6" />
+                    <VolumeIcon className="w-5 h-5" />
                 </button>
 
                 <Slider
@@ -92,14 +88,14 @@ const VolumeControl = memo(
                     max={100}
                     step={1}
                     onValueChange={onVolumeChange}
-                    className="w-full group"
+                    className="w-full md:w-full group cursor-pointer"
                     trackClassName={SLIDER_CLASSES.trackClassName}
                     rangeClassName={SLIDER_CLASSES.rangeClassName}
                     thumbClassName={SLIDER_CLASSES.thumbClassName}
                     showThumb={true}
                 />
 
-                <span className="text-[#a1a1a1] select-none text-md min-w-10">
+                <span className="text-[#a1a1a1] select-none text-sm min-w-10">
                     {displayVolume}%
                 </span>
             </div>
@@ -149,15 +145,15 @@ const Player = () => {
     }, [audio, volume, prevVolume]);
 
     return (
-        <div className="w-full fixed bottom-5 items-center flex h-16 bg-black/20 backdrop-blur-sm">
+        <div className="w-full fixed bottom-0 left-0 items-center flex h-18 py-2 bg-black/20 backdrop-blur-sm">
             <SongInfo song={currentSong} />
 
-            <div className="flex flex-col flex-3/4 gap-2 items-center justify-center">
+            <div className="flex flex-col flex-3/4 gap-1 items-center justify-center">
                 <Controls />
                 <ProgressBar />
             </div>
 
-            <div className="flex-1/4 flex justify-end mr-10">
+            <div className="md:flex-1/4 flex justify-end md:mr-10">
                 <VolumeControl
                     volume={volume}
                     onVolumeChange={handleVolumeChange}

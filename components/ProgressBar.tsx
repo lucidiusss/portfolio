@@ -60,8 +60,8 @@ const ProgressBar = memo(() => {
     }, []);
 
     return (
-        <div className="w-1/2 flex items-center gap-3">
-            <span className="text-white select-none min-w-10 text-center">
+        <div className="w-full flex items-center justify-center gap-3">
+            <span className="text-white text-xs md:text-lg select-none min-w-10 text-center">
                 {formattedCurrentTime}
             </span>
 
@@ -73,14 +73,14 @@ const ProgressBar = memo(() => {
                 onValueChange={handleValueChange}
                 onValueCommit={handleValueCommit}
                 onDragStart={handleDragStart}
-                className="w-full group cursor-pointer"
+                className="w-1/3 group cursor-pointer"
                 trackClassName={SLIDER_CLASSES.trackClassName}
                 rangeClassName={SLIDER_CLASSES.rangeClassName}
                 thumbClassName={SLIDER_CLASSES.thumbClassName}
                 showThumb={true}
             />
 
-            <span className="text-white select-none min-w-10 text-center">
+            <span className="text-white text-xs md:text-lg select-none min-w-10 text-center">
                 {formattedMaxTime}
             </span>
         </div>
