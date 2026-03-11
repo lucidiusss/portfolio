@@ -27,7 +27,7 @@ const SongInfo = memo(({ song }: { song?: SongType }) => {
     }
 
     return (
-        <div className="flex items-center w-full md:flex-1/4 md:ml-10 gap-2 md:gap-3">
+        <div className="flex items-center w-full md:flex-1/3 lg:flex-1/4 md:ml-10 gap-2 md:gap-3">
             <div>
                 <Image
                     loading="lazy"
@@ -74,7 +74,7 @@ const VolumeControl = memo(
         }, [displayVolume]);
 
         return (
-            <div className="md:w-48 w-12 flex items-center gap-2">
+            <div className="w-48 flex items-center gap-2">
                 <button
                     onClick={onToggleMute}
                     className="focus:outline-none cursor-pointer text-[#a1a1a1] hover:text-white transition-colors"
@@ -150,7 +150,7 @@ const Player = () => {
             <SongInfo song={currentSong} />
             <Button
                 onClick={audio.togglePlayPause}
-                className="  rounded-lg w-10 h-10 p-4  bg-neutral-900 hover:bg-neutral-800 text-[#a1a1a1] hover:text-white"
+                className="flex md:hidden rounded-lg w-10 h-10 p-4  bg-neutral-900 hover:bg-neutral-800 text-[#a1a1a1] hover:text-white"
             >
                 {!audio.isPlaying ? (
                     <Play className="border border-transparent w-4 h-4" />
@@ -159,12 +159,12 @@ const Player = () => {
                 )}
             </Button>
 
-            <div className="hidden md:flex flex-col flex-3/4 gap-1 items-center justify-center">
+            <div className="hidden md:flex flex-col md:flex-1/3 lg:flex-3/4 gap-1 items-center">
                 <Controls />
                 <ProgressBar />
             </div>
 
-            <div className="hidden md:flex justify-end md:mr-10">
+            <div className="hidden md:flex md:flex-1/3 lg:flex-1/4 justify-end md:mr-10">
                 <VolumeControl
                     volume={volume}
                     onVolumeChange={handleVolumeChange}

@@ -594,12 +594,12 @@ const SongInfo = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
                 children: "No track selected"
             }, void 0, false, {
                 fileName: "[project]/components/Player.tsx",
-                lineNumber: 23,
+                lineNumber: 24,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/components/Player.tsx",
-            lineNumber: 22,
+            lineNumber: 23,
             columnNumber: 13
         }, ("TURBOPACK compile-time value", void 0));
     }
@@ -616,12 +616,12 @@ const SongInfo = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
                     alt: song.title
                 }, void 0, false, {
                     fileName: "[project]/components/Player.tsx",
-                    lineNumber: 31,
+                    lineNumber: 32,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/Player.tsx",
-                lineNumber: 30,
+                lineNumber: 31,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -632,7 +632,7 @@ const SongInfo = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
                         children: song.title
                     }, void 0, false, {
                         fileName: "[project]/components/Player.tsx",
-                        lineNumber: 41,
+                        lineNumber: 42,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -641,19 +641,19 @@ const SongInfo = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
                         children: song.artist
                     }, void 0, false, {
                         fileName: "[project]/components/Player.tsx",
-                        lineNumber: 42,
+                        lineNumber: 43,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Player.tsx",
-                lineNumber: 40,
+                lineNumber: 41,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/Player.tsx",
-        lineNumber: 29,
+        lineNumber: 30,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 });
@@ -685,12 +685,12 @@ const VolumeControl = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$proje
                     className: "w-4 h-4"
                 }, void 0, false, {
                     fileName: "[project]/components/Player.tsx",
-                    lineNumber: 82,
+                    lineNumber: 83,
                     columnNumber: 21
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/Player.tsx",
-                lineNumber: 77,
+                lineNumber: 78,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ui$2f$slider$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Slider"], {
@@ -708,7 +708,7 @@ const VolumeControl = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$proje
                 showThumb: true
             }, void 0, false, {
                 fileName: "[project]/components/Player.tsx",
-                lineNumber: 85,
+                lineNumber: 86,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -719,13 +719,13 @@ const VolumeControl = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$proje
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Player.tsx",
-                lineNumber: 98,
+                lineNumber: 99,
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/Player.tsx",
-        lineNumber: 76,
+        lineNumber: 77,
         columnNumber: 13
     }, ("TURBOPACK compile-time value", void 0));
 }, "+PalhjDKHI4sO2WpDZYXzVUUWGM="));
@@ -773,31 +773,10 @@ const Player = ()=>{
         prevVolume
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full px-3 md:px-0 fixed bottom-0 left-0 items-center flex h-18 md:py-2 bg-white/20 backdrop-blur-sm",
+        className: "w-full px-5 md:px-0 fixed bottom-0 left-0 items-center flex h-18 md:py-2 bg-neutral-900/10 backdrop-blur-xl",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SongInfo, {
                 song: currentSong
-            }, void 0, false, {
-                fileName: "[project]/components/Player.tsx",
-                lineNumber: 149,
-                columnNumber: 13
-            }, ("TURBOPACK compile-time value", void 0)),
-            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
-                onClick: audio.togglePlayPause,
-                className: "  rounded-lg w-10 h-10 p-4  bg-neutral-900 hover:bg-neutral-800 text-[#a1a1a1] hover:text-white",
-                children: !audio.isPlaying ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Play, {
-                    className: "border border-transparent w-4 h-4"
-                }, void 0, false, {
-                    fileName: "[project]/components/Player.tsx",
-                    lineNumber: 155,
-                    columnNumber: 21
-                }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Pause, {
-                    className: "border border-transparent w-4 h-4"
-                }, void 0, false, {
-                    fileName: "[project]/components/Player.tsx",
-                    lineNumber: 157,
-                    columnNumber: 21
-                }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/Player.tsx",
                 lineNumber: 150,
@@ -808,18 +787,18 @@ const Player = ()=>{
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Controls$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/components/Player.tsx",
-                        lineNumber: 162,
+                        lineNumber: 153,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ProgressBar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/components/Player.tsx",
-                        lineNumber: 163,
+                        lineNumber: 154,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Player.tsx",
-                lineNumber: 161,
+                lineNumber: 152,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -830,18 +809,18 @@ const Player = ()=>{
                     onToggleMute: toggleMute
                 }, void 0, false, {
                     fileName: "[project]/components/Player.tsx",
-                    lineNumber: 167,
+                    lineNumber: 158,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/Player.tsx",
-                lineNumber: 166,
+                lineNumber: 157,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/components/Player.tsx",
-        lineNumber: 148,
+        lineNumber: 149,
         columnNumber: 9
     }, ("TURBOPACK compile-time value", void 0));
 };
@@ -889,7 +868,7 @@ const PlaylistContentInner = ()=>{
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "PlaylistContentInner.useEffect": ()=>{
             audio.replacePlaylist(__TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$consts$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SONGS"]);
-            audio.setVolumePercent(50);
+            audio.setVolumePercent(100);
             return ({
                 "PlaylistContentInner.useEffect": ()=>{
                     audio.replacePlaylist([]);
