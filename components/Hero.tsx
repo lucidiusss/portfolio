@@ -3,7 +3,7 @@ import HeroNav from "./HeroNav";
 
 const Hero = () => {
     return (
-        <section className="w-full h-screen flex flex-col gap-16 justify-center md:justify-between items-center">
+        <section className="w-full h-screen flex md:flex-row flex-col gap-16 justify-center md:justify-between items-center">
             <div className="w-fit flex  items-center flex-col gap-5">
                 <div className="flex flex-col gap-5 text-center md:text-start">
                     <h1 className="text-4xl text-[#F5F5F5]">Nikita Isaev</h1>

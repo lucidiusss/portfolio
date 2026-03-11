@@ -12863,6 +12863,12 @@
   }
 
   @media (min-width: 48rem) {
+    .md\:h-full {
+      height: 100%;
+    }
+  }
+
+  @media (min-width: 48rem) {
     .md\:h-screen {
       height: 100vh;
     }
@@ -12913,6 +12919,12 @@
   @media (min-width: 48rem) {
     .md\:flex-3\/4 {
       flex: 75%;
+    }
+  }
+
+  @media (min-width: 48rem) {
+    .md\:flex-row {
+      flex-direction: row;
     }
   }
 
