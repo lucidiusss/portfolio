@@ -12975,6 +12975,12 @@
   }
 
   @media (min-width: 48rem) {
+    .md\:items-start {
+      align-items: flex-start;
+    }
+  }
+
+  @media (min-width: 48rem) {
     .md\:justify-between {
       justify-content: space-between;
     }
