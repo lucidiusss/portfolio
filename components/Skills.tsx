@@ -57,7 +57,7 @@ const SKILLS: SkillProps[] = [
 
 const Skills = () => {
     return (
-        <section className="h-screen flex flex-col items-center gap-10">
+        <section className="h-full md:h-screen flex flex-col items-center py-10 gap-10">
             <h1 className="text-[#A1A1A1] text-4xl">my skillset</h1>
             <div
                 id="skills"
@@ -68,7 +68,7 @@ const Skills = () => {
                         key={i}
                         skill={skill.name}
                         className={cn(
-                            "text-[#A1A1A1] transition text-xl w-64 rounded-lg p-4 border border-[#A1A1A1]",
+                            "text-[#A1A1A1] text-sm md:text-xl w-32 h-fit md:w-64 rounded-lg py-2 border border-[#A1A1A1]",
                         )}
                         size={48}
                     />

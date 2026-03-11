@@ -192,10 +192,10 @@ const HeroNav = ()=>{
     _s();
     const { scrollTo } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$hooks$2f$useLenis$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useLenis"])();
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "text-[#A1A1A1] flex flex-col w-1/3",
+        className: "text-[#A1A1A1] w-fit flex flex-col",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                className: "text-sm font-thin",
+                className: "text-sm font-thin hidden md:block",
                 children: "start here"
             }, void 0, false, {
                 fileName: "[project]/components/HeroNav.tsx",
@@ -206,7 +206,7 @@ const HeroNav = ()=>{
                 className: "flex flex-col gap-3 mt-6",
                 children: NavItems.map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                         onClick: ()=>scrollTo("#skills"),
-                        className: "cursor-pointer flex group hover:text-white transition items-center gap-5",
+                        className: "cursor-pointer  flex group hover:text-white transition items-center gap-5",
                         children: [
                             item.icon,
                             item.title
@@ -303,7 +303,7 @@ const SKILLS = [
 ];
 const Skills = ()=>{
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-        className: "h-screen flex flex-col items-center gap-10",
+        className: "h-full md:h-screen flex flex-col items-center py-10 gap-10",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
                 className: "text-[#A1A1A1] text-4xl",
@@ -318,7 +318,7 @@ const Skills = ()=>{
                 className: "flex flex-wrap items-center justify-center gap-5",
                 children: SKILLS.map((skill, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$skills$2d$icons$2f$dist$2f$index$2e$esm$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["SkillIcon"], {
                         skill: skill.name,
-                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-[#A1A1A1] transition text-xl w-64 rounded-lg p-4 border border-[#A1A1A1]"),
+                        className: (0, __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$utils$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["cn"])("text-[#A1A1A1] text-sm md:text-xl w-32 h-fit md:w-64 rounded-lg py-2 border border-[#A1A1A1]"),
                         size: 48
                     }, i, false, {
                         fileName: "[project]/components/Skills.tsx",

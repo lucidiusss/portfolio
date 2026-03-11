@@ -27,14 +27,14 @@ const HeroNav = () => {
     const { scrollTo } = useLenis();
 
     return (
-        <div className="text-[#A1A1A1] flex flex-col w-1/3">
-            <h1 className="text-sm font-thin">start here</h1>
+        <div className="text-[#A1A1A1] w-fit flex flex-col">
+            <h1 className="text-sm font-thin hidden md:block">start here</h1>
             <nav className="flex flex-col gap-3 mt-6">
                 {NavItems.map((item, i: number) => (
                     <button
                         key={i}
                         onClick={() => scrollTo("#skills")}
-                        className="cursor-pointer flex group hover:text-white transition items-center gap-5"
+                        className="cursor-pointer  flex group hover:text-white transition items-center gap-5"
                     >
                         {item.icon}
                         {item.title}

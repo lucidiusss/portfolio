@@ -32,7 +32,7 @@ const Song = ({ song })=>{
         textValue: song.title,
         className: `
                 rounded-lg transition border-2
-                px-4 py-2 w-full md:w-2/3 lg:w-1/3
+                px-4 py-2 w-full md:w-2/3 lg:w-1/4
                 hover:border-neutral-700 hover:bg-neutral-900!
                 ${isCurrentTrack ? "border-neutral-700 bg-neutral-900" : "border-transparent"}
             `,
@@ -67,7 +67,7 @@ const Song = ({ song })=>{
                 className: "flex gap-1 flex-col",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroui$2f$react$2f$dist$2f$components$2f$label$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["Label"], {
-                        className: "text-white text-lg md:text-xl",
+                        className: "text-white text-xs md:text-base",
                         children: song.title
                     }, void 0, false, {
                         fileName: "[project]/components/Song.tsx",
@@ -75,7 +75,7 @@ const Song = ({ song })=>{
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$heroui$2f$react$2f$dist$2f$components$2f$description$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$locals$3e$__["Description"], {
-                        className: "text-[#a1a1a1] text-md md:text-[16px]",
+                        className: "text-[#a1a1a1] text-md md:text-sm",
                         children: song.artist
                     }, void 0, false, {
                         fileName: "[project]/components/Song.tsx",
@@ -492,7 +492,7 @@ const ProgressBar = /*#__PURE__*/ _s((0, __TURBOPACK__imported__module__$5b$proj
         className: "w-full flex items-center justify-center gap-3",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "text-white text-xs md:text-lg select-none min-w-10 text-center",
+                className: "text-[#a1a1a1] text-xs md:text-sm select-none min-w-10 text-center",
                 children: formattedCurrentTime
             }, void 0, false, {
                 fileName: "[project]/components/ProgressBar.tsx",
@@ -520,7 +520,7 @@ const ProgressBar = /*#__PURE__*/ _s((0, __TURBOPACK__imported__module__$5b$proj
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "text-white text-xs md:text-lg select-none min-w-10 text-center",
+                className: "text-[#a1a1a1] text-xs md:text-sm select-none min-w-10 text-center",
                 children: formattedMaxTime
             }, void 0, false, {
                 fileName: "[project]/components/ProgressBar.tsx",
@@ -604,15 +604,14 @@ const SongInfo = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
         }, ("TURBOPACK compile-time value", void 0));
     }
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "flex items-center md:flex-1/4 md:ml-10 gap-2 md:gap-3",
+        className: "flex items-center w-full md:flex-1/4 md:ml-10 gap-2 md:gap-3",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "h-8 w-8 md:w-16 md:h-16",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                     loading: "lazy",
                     width: 32,
                     height: 32,
-                    className: "h-8 w-8 md:w-16 md:h-16 rounded-lg object-cover",
+                    className: "w-12 h-12 rounded-lg object-cover",
                     src: song.cover,
                     alt: song.title
                 }, void 0, false, {
@@ -629,7 +628,7 @@ const SongInfo = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
                 className: "flex flex-col gap-0",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
-                        className: "text-white text-sm  md:text-xl",
+                        className: "text-white text-base",
                         children: song.title
                     }, void 0, false, {
                         fileName: "[project]/components/Player.tsx",
@@ -638,7 +637,7 @@ const SongInfo = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                         href: song.artistLink || "#",
-                        className: "text-[#a1a1a1] text-xs md:text-[16px] hover:underline transition",
+                        className: "text-[#a1a1a1] text-sm hover:underline transition",
                         children: song.artist
                     }, void 0, false, {
                         fileName: "[project]/components/Player.tsx",
@@ -683,7 +682,7 @@ const VolumeControl = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$proje
                 className: "focus:outline-none cursor-pointer text-[#a1a1a1] hover:text-white transition-colors",
                 "aria-label": displayVolume === 0 ? "Unmute" : "Mute",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(VolumeIcon, {
-                    className: "w-5 h-5"
+                    className: "w-4 h-4"
                 }, void 0, false, {
                     fileName: "[project]/components/Player.tsx",
                     lineNumber: 82,
@@ -713,7 +712,7 @@ const VolumeControl = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$proje
                 columnNumber: 17
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                className: "text-[#a1a1a1] select-none text-sm min-w-10",
+                className: "text-[#a1a1a1] select-none text-xs min-w-10",
                 children: [
                     displayVolume,
                     "%"
@@ -774,7 +773,7 @@ const Player = ()=>{
         prevVolume
     ]);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-        className: "w-full fixed bottom-0 left-0 items-center flex h-18 py-2 bg-black/20 backdrop-blur-sm",
+        className: "w-full px-3 md:px-0 fixed bottom-0 left-0 items-center flex h-18 md:py-2 bg-white/20 backdrop-blur-sm",
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(SongInfo, {
                 song: currentSong
@@ -783,39 +782,60 @@ const Player = ()=>{
                 lineNumber: 149,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Button, {
+                onClick: audio.togglePlayPause,
+                className: "  rounded-lg w-10 h-10 p-4  bg-neutral-900 hover:bg-neutral-800 text-[#a1a1a1] hover:text-white",
+                children: !audio.isPlaying ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Play, {
+                    className: "border border-transparent w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/components/Player.tsx",
+                    lineNumber: 155,
+                    columnNumber: 21
+                }, ("TURBOPACK compile-time value", void 0)) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(Pause, {
+                    className: "border border-transparent w-4 h-4"
+                }, void 0, false, {
+                    fileName: "[project]/components/Player.tsx",
+                    lineNumber: 157,
+                    columnNumber: 21
+                }, ("TURBOPACK compile-time value", void 0))
+            }, void 0, false, {
+                fileName: "[project]/components/Player.tsx",
+                lineNumber: 150,
+                columnNumber: 13
+            }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "flex flex-col flex-3/4 gap-1 items-center justify-center",
+                className: "hidden md:flex flex-col flex-3/4 gap-1 items-center justify-center",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Controls$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/components/Player.tsx",
-                        lineNumber: 152,
+                        lineNumber: 162,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0)),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ProgressBar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/components/Player.tsx",
-                        lineNumber: 153,
+                        lineNumber: 163,
                         columnNumber: 17
                     }, ("TURBOPACK compile-time value", void 0))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Player.tsx",
-                lineNumber: 151,
+                lineNumber: 161,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "md:flex-1/4 flex justify-end md:mr-10",
+                className: "hidden md:flex justify-end md:mr-10",
                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(VolumeControl, {
                     volume: volume,
                     onVolumeChange: handleVolumeChange,
                     onToggleMute: toggleMute
                 }, void 0, false, {
                     fileName: "[project]/components/Player.tsx",
-                    lineNumber: 157,
+                    lineNumber: 167,
                     columnNumber: 17
                 }, ("TURBOPACK compile-time value", void 0))
             }, void 0, false, {
                 fileName: "[project]/components/Player.tsx",
-                lineNumber: 156,
+                lineNumber: 166,
                 columnNumber: 13
             }, ("TURBOPACK compile-time value", void 0))
         ]

@@ -11,7 +11,7 @@ const PlaylistContentInner = () => {
 
     useEffect(() => {
         audio.replacePlaylist(SONGS);
-        audio.setVolumePercent(50);
+        audio.setVolumePercent(100);
 
         return () => {
             audio.replacePlaylist([]);

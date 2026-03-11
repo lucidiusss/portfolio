@@ -26,7 +26,7 @@ const Song: FC<SongProps> = ({ song }) => {
             textValue={song.title}
             className={`
                 rounded-lg transition border-2
-                px-4 py-2 w-full md:w-2/3 lg:w-1/3
+                px-4 py-2 w-full md:w-2/3 lg:w-1/4
                 hover:border-neutral-700 hover:bg-neutral-900!
                 ${
                     isCurrentTrack
@@ -48,10 +48,10 @@ const Song: FC<SongProps> = ({ song }) => {
             </div>
 
             <div className="flex gap-1 flex-col">
-                <Label className="text-white text-lg md:text-xl">
+                <Label className="text-white text-xs md:text-base">
                     {song.title}
                 </Label>
-                <Description className="text-[#a1a1a1] text-md md:text-[16px]">
+                <Description className="text-[#a1a1a1] text-md md:text-sm">
                     {song.artist}
                 </Description>
             </div>

@@ -61,7 +61,7 @@ const ProgressBar = memo(() => {
 
     return (
         <div className="w-full flex items-center justify-center gap-3">
-            <span className="text-white text-xs md:text-lg select-none min-w-10 text-center">
+            <span className="text-[#a1a1a1] text-xs md:text-sm select-none min-w-10 text-center">
                 {formattedCurrentTime}
             </span>
 
@@ -80,7 +80,7 @@ const ProgressBar = memo(() => {
                 showThumb={true}
             />
 
-            <span className="text-white text-xs md:text-lg select-none min-w-10 text-center">
+            <span className="text-[#a1a1a1] text-xs md:text-sm select-none min-w-10 text-center">
                 {formattedMaxTime}
             </span>
         </div>
